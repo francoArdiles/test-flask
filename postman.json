@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "65dc66c2-03cd-4eaf-96f1-050b1fb8d285",
+		"name": "Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12214110"
+	},
+	"item": [
+		{
+			"name": "Crear institucion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Institucion A\",\r\n    \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\r\n    \"description\": \"primera Institucion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/institutions",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"institutions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear institucion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Institucion A\",\r\n    \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\r\n    \"description\": \"primera Institucion\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/institutions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institutions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:32:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "199"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n    \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n    \"description\": \"primera Institucion\",\n    \"id\": 2,\n    \"name\": \"Institucion A\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar Instituciones",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Listar Instituciones",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/institutions",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institutions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:35:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "601"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"address\": \"calle falsa 123\",\n        \"created_at\": \"Fri, 27 Jan 2023 00:00:00 GMT\",\n        \"description\": \"descripcion\",\n        \"id\": 0,\n        \"name\": \"nombre de inst\"\n    },\n    {\n        \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n        \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n        \"description\": \"primera Institucion\",\n        \"id\": 1,\n        \"name\": \"Institucion 0\"\n    },\n    {\n        \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n        \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n        \"description\": \"primera Institucion\",\n        \"id\": 2,\n        \"name\": \"Institucion A\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"last_name\": \"Doe\",\r\n    \"day_of_birth\": \"1990-01-01\",\r\n    \"role\": \"Director\",\r\n    \"rut\": \"11111111-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\",\r\n    \"last_name\": \"Doe\",\r\n    \"day_of_birth\": \"1990-01-01\",\r\n    \"role\": \"Director\",\r\n    \"rut\": \"11111111-1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/users",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:41:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"age\": 33,\n    \"day_of_birth\": \"Mon, 01 Jan 1990 00:00:00 GMT\",\n    \"id\": 1,\n    \"last_name\": \"Doe\",\n    \"name\": \"John\",\n    \"role\": \"Director\",\n    \"rut\": \"11111111-1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Lista usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear proyecto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"proyecto\",\r\n    \"description\": \"descripcion del proyecto\",\r\n    \"start\": \"2023-01-01\",\r\n    \"end\": \"2023-03-01\",\r\n    \"manager_id\": 1,\r\n    \"institution_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/projects",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear proyecto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"proyecto\",\r\n    \"description\": \"descripcion del proyecto\",\r\n    \"start\": \"2023-01-01\",\r\n    \"end\": \"2023-03-01\",\r\n    \"manager_id\": 1,\r\n    \"institution_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:5000/projects",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:46:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "209"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"description\": \"descripcion del proyecto\",\n    \"end\": \"Wed, 01 Mar 2023 00:00:00 GMT\",\n    \"id\": 1,\n    \"institution_id\": 1,\n    \"manager_id\": 1,\n    \"name\": \"proyecto\",\n    \"start\": \"Sun, 01 Jan 2023 00:00:00 GMT\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar proyectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/projects",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar proyectos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/projects",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:46:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"description\": \"descripcion del proyecto\",\n        \"end\": \"Wed, 01 Mar 2023 00:00:00 GMT\",\n        \"id\": 1,\n        \"institution_id\": 1,\n        \"manager_id\": 1,\n        \"name\": \"proyecto\",\n        \"start\": \"Sun, 01 Jan 2023 00:00:00 GMT\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Proyectos de una institucion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/institutions/1/projects",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"institutions",
+						"1",
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Proyectos de una institucion",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/institutions/1/projects",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institutions",
+								"1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:48:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "629"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n    \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n    \"description\": \"primera Institucion\",\n    \"id\": 1,\n    \"name\": \"Institucion 0\",\n    \"projects\": [\n        {\n            \"description\": \"descripcion del proyecto\",\n            \"end\": \"Wed, 01 Mar 2023 00:00:00 GMT\",\n            \"manager\": {\n                \"age\": 33,\n                \"day_of_birth\": \"Mon, 01 Jan 1990 00:00:00 GMT\",\n                \"id\": 1,\n                \"last_name\": \"Doe\",\n                \"name\": \"John\",\n                \"role\": \"Director\",\n                \"rut\": \"11111111-1\"\n            },\n            \"name\": \"proyecto\",\n            \"start\": \"Sun, 01 Jan 2023 00:00:00 GMT\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Proyectos de usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/users/11111111-1/projects",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"11111111-1",
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Proyectos de usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/users/11111111-1/projects",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"11111111-1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:48:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "429"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"age\": 33,\n    \"day_of_birth\": \"Mon, 01 Jan 1990 00:00:00 GMT\",\n    \"id\": 1,\n    \"last_name\": \"Doe\",\n    \"name\": \"John\",\n    \"projects\": [\n        {\n            \"description\": \"descripcion del proyecto\",\n            \"end\": \"Wed, 01 Mar 2023 00:00:00 GMT\",\n            \"id\": 1,\n            \"institution_id\": 1,\n            \"manager_id\": 1,\n            \"name\": \"proyecto\",\n            \"start\": \"Sun, 01 Jan 2023 00:00:00 GMT\"\n        }\n    ],\n    \"role\": \"Director\",\n    \"rut\": \"11111111-1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "instituciones con google maps",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/institutions/maps",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"institutions",
+						"maps"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "instituciones con google maps",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/institutions/maps",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"institutions",
+								"maps"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:49:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1028"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"abbreviated_name\": \"NOM\",\n        \"address\": \"calle falsa 123\",\n        \"created_at\": \"Fri, 27 Jan 2023 00:00:00 GMT\",\n        \"description\": \"descripcion\",\n        \"google_address\": \"https://www.google.com/maps/search/calle%20falsa%20123\",\n        \"id\": 0,\n        \"name\": \"nombre de inst\"\n    },\n    {\n        \"abbreviated_name\": \"INS\",\n        \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n        \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n        \"description\": \"primera Institucion\",\n        \"google_address\": \"https://www.google.com/maps/search/Av.%20La%20Marina%2015,%20Viña%20del%20Mar,%20Valparaíso\",\n        \"id\": 1,\n        \"name\": \"Institucion 0\"\n    },\n    {\n        \"abbreviated_name\": \"INS\",\n        \"address\": \"Av. La Marina 15, Viña del Mar, Valparaíso\",\n        \"created_at\": \"Sat, 28 Jan 2023 00:00:00 GMT\",\n        \"description\": \"primera Institucion\",\n        \"google_address\": \"https://www.google.com/maps/search/Av.%20La%20Marina%2015,%20Viña%20del%20Mar,%20Valparaíso\",\n        \"id\": 2,\n        \"name\": \"Institucion A\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "tiempo de termino proyectos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/projects/estimations",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"projects",
+						"estimations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "tiempo de termino proyectos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:5000/projects/estimations",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								"estimations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.2.2 Python/3.11.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Jan 2023 00:52:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"days\": 33,\n        \"id\": 1,\n        \"name\": \"proyecto\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
